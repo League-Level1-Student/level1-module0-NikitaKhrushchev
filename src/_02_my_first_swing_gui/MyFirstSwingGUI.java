@@ -10,11 +10,19 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class MyFirstSwingGUI {
 	public void run() {
-
+		JFrame j = new JFrame();
+		j.setVisible(true);
+		j.setDefaultCloseOperation(j.EXIT_ON_CLOSE);
+		JLabel a = new JLabel("Hello");
+		JPanel b = new JPanel();
+		j.add(b);
+		b.add(a);
+		
 		// 1. Create and initialize an object of the JFrame class
 
 		// 2. Set your JFrame object to be visible
