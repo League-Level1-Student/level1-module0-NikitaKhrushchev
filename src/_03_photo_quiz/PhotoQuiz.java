@@ -19,24 +19,47 @@ public class PhotoQuiz {
 	public void run() throws Exception {
 
 		JFrame quizWindow = new JFrame();
-		quizWindow.setVisible(true);
+		
 		// This will make sure the program exits when you close the window
 		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
+		String comp = "https://www.aoc.gov/sites/default/files/images/buildings/6080137063_3e6c91ee8b_o.jpg";
+		String comp2 = "https://amp.businessinsider.com/images/576b0ffd52bcd0320c8cafec-750-500.jpg";
+		
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component co;
 		// 3. use the "createImage()" method below to initialize your Component
-
+		co= createImage(comp);
 		// 4. add the image to the quiz window
-
+		quizWindow.add(co);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		quizWindow.setVisible(true);
+		String answer = JOptionPane.showInputDialog("Who has the senate majority at this time?");
+		if (answer.toLowerCase().equals("republicans") == true) {
+			JOptionPane.showMessageDialog(null, "CORRECT");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORRECT");
+		}
+		quizWindow.remove(co);
+		Component co2 = createImage(comp2);
+		quizWindow.add(co2);
+		quizWindow.pack();
+		String answer2 = JOptionPane.showInputDialog("How many Supreme Court Justices are there?(Currently)");
+		if (answer2.equals("9") == true) {
+			JOptionPane.showMessageDialog(null, "CORRECT");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "INCORRECT");
+		
+		}
+		quizWindow.remove(co2);
+		quizWindow.setVisible(false);
 		// 7. print "CORRECT" if the user gave the right answer
 
 		// 8. print "INCORRECT" if the answer is wrong

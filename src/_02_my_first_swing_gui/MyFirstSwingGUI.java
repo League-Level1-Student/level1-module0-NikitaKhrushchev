@@ -4,6 +4,7 @@ package _02_my_first_swing_gui;
  *    Level 1
  */
 
+import java.awt.Window;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -17,12 +18,14 @@ public class MyFirstSwingGUI {
 	public void run() {
 		JFrame j = new JFrame();
 		j.setVisible(true);
-		j.setDefaultCloseOperation(j.EXIT_ON_CLOSE);
+		j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JLabel a = new JLabel("Hello");
+		a.setIcon(loadImage());
+		//JLabel c = new JLabel();
 		JPanel b = new JPanel();
 		j.add(b);
 		b.add(a);
-		
+		j.pack();
 		// 1. Create and initialize an object of the JFrame class
 
 		// 2. Set your JFrame object to be visible
@@ -44,7 +47,7 @@ public class MyFirstSwingGUI {
 
 		// 10. Pack your JFrame.
 
-		// 11. Run your program again. Do you see your message.
+		// 11. Run your program again. Do you see your message?
 
 		// 12. Use the loadImage method to set the icon of the JLabel object.
 
