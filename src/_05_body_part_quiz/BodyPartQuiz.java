@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(100, 140);
 
 		showNextImage();
 
@@ -51,12 +51,23 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int Score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
-
+		String[] answers = {"arnold","leonardo","morgan","jack"};
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
-
+		for (int i = 0; i < 4; i++) {
+		String guess = JOptionPane.showInputDialog("who is this? (first name)");
+		//guess = guess.toLowerCase();
+		if(guess.equalsIgnoreCase(answers[i])) {
+			System.out.println("that is correct");
+			Score = Score + 1;
+			showNextImage();
+		}
+		else {
+			System.out.println("that is not correct");
+			showNextImage();
+		}
+		}
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 
@@ -64,7 +75,7 @@ public class BodyPartQuiz {
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
+		//showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
 

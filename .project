@@ -21,6 +21,16 @@
 			<locationURI>PROJECT_LOC/tuned-drums.jpg</locationURI>
 		</link>
 		<link>
+			<name>src/_04_drum_kit/Cymbal.webp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Cymbal.webp</locationURI>
+		</link>
+		<link>
+			<name>src/_04_drum_kit/snareDrum.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/snareDrum.jpg</locationURI>
+		</link>
+		<link>
 			<name>src/_04_drum_kit/tuned-drums.jpg</name>
 			<type>1</type>
 			<locationURI>PROJECT_LOC/tuned-drums.jpg</locationURI>
